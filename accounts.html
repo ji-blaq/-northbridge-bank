@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accounts | NorthBridge Bank</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="utilities.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="accounts.css">
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+<body>
+<div class="mobile-header">
+
+    <button id="menuBtn">
+
+        ☰
+
+    </button>
+
+    <h2>NorthBridge Bank</h2>
+
+    <div class="avatar" id="mobileAvatar">
+
+        JA
+
+    </div>
+
+</div>
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar" id="sidebar">
+<button id="closeMenu">
+
+    ✕
+
+</button>
+        <div class="logo">
+
+            <h2>NorthBridge</h2>
+
+            <span>Bank</span>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">🏠 Dashboard</a>
+
+            <a href="accounts.html" class="active">🏦 Accounts</a>
+
+            <a href="transactions.html">📜 Transactions</a>
+
+            <a href="transfer.html">💸 Transfer</a>
+
+        </nav>
+
+        <button id="logoutBtn">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+
+                    My Accounts
+
+                </h1>
+
+                <p>
+
+                    Manage your banking accounts.
+
+                </p>
+
+            </div>
+
+            <div class="avatar" id="avatar">
+
+                JA
+
+            </div>
+
+        </header>
+
+        <!-- Accounts -->
+
+        <section class="accounts-grid">
+
+            <!-- Checking -->
+
+            <div class="account-box">
+
+                <span class="account-type">
+
+                    Checking Account
+
+                </span>
+
+                <h2 id="checkingBalance">
+
+                    $0.00
+
+                </h2>
+
+                <p>
+
+                    Account Number
+
+                </p>
+
+                <strong>
+
+                    •••• 4837
+
+                </strong>
+
+                <p>
+
+                    Routing Number
+
+                </p>
+
+                <strong>
+
+                    021000021
+
+                </strong>
+
+                <div class="status">
+
+                    Active
+
+                </div>
+
+            </div>
+
+            <!-- Savings -->
+
+            <div class="account-box">
+
+                <span class="account-type">
+
+                    Savings Account
+
+                </span>
+
+                <h2 id="savingsBalance">
+
+                    $0.00
+
+                </h2>
+
+                <p>
+
+                    Interest Rate
+
+                </p>
+
+                <strong>
+
+                    3.80% APY
+
+                </strong>
+
+                <p>
+
+                    Status
+
+                </p>
+
+                <strong>
+
+                    Active
+
+                </strong>
+
+            </div>
+
+            <!-- Credit -->
+
+            <div class="account-box">
+
+                <span class="account-type">
+
+                    Platinum Credit Card
+
+                </span>
+
+                <h2>
+
+                    $25,000
+
+                </h2>
+
+                <p>
+
+                    Available Credit
+
+                </p>
+
+                <strong>
+
+                    $18,200
+
+                </strong>
+
+                <p>
+
+                    Card Ending
+
+                </p>
+
+                <strong>
+
+                    •••• 9261
+
+                </strong>
+
+            </div>
+
+        </section>
+
+        <!-- Summary -->
+
+        <section class="account-summary">
+
+            <h2>
+
+                Account Summary
+
+            </h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Account</th>
+
+                    <th>Status</th>
+
+                    <th>Currency</th>
+
+                    <th>Opened</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Checking</td>
+
+                    <td>Active</td>
+
+                    <td>USD</td>
+
+                    <td>March 2022</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Savings</td>
+
+                    <td>Active</td>
+
+                    <td>USD</td>
+
+                    <td>March 2022</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Credit</td>
+
+                    <td>Active</td>
+
+                    <td>USD</td>
+
+                    <td>June 2023</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="users.js"></script>
+<script src="accounts.js"></script>
+
+</body>
+
+</html>

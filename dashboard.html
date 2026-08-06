@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | NorthBridge Bank</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="utilities.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+<body>
+<div class="mobile-header">
+
+    <button id="menuBtn">
+
+        ☰
+
+    </button>
+
+    <h2>NorthBridge Bank</h2>
+
+    <div class="avatar" id="mobileAvatar">
+
+        JA
+
+    </div>
+
+</div>
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar" id="sidebar">
+        <button id="closeMenu">
+
+    ✕
+
+</button>
+        <div class="logo">
+
+            <h2>NorthBridge</h2>
+            <span>Bank</span>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <nav class="sidebar-nav">
+
+    <a href="dashboard.html" class="active">🏠 Dashboard</a>
+
+    <a href="accounts.html">🏦 Accounts</a>
+
+    <a href="transactions.html">📜 Transactions</a>
+
+    <a href="transfer.html">💸 Transfer</a>
+
+</nav>
+
+            <a href="#">📈 Investments</a>
+
+            <a href="#">🏡 Loans</a>
+
+            <a href="#">⚙ Settings</a>
+
+        </nav>
+
+        <button id="logoutBtn" class="btn btn-primary">
+
+            Logout
+
+        </button>
+        <!-- <button id="mobileLogout" class="mobile-logout">
+    Logout
+</button> -->
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <!-- Top Bar -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1 id="welcomeName">
+
+                    Good Morning,
+
+                </h1>
+
+                <p>
+
+                    Welcome back to NorthBridge Bank.
+
+                </p>
+
+            </div>
+
+            <div class="profile">
+
+                <div class="notification">
+
+                    🔔
+
+                </div>
+
+                <div class="avatar" id="avatar">
+
+                    JA
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Accounts -->
+
+        <section class="account-grid">
+
+            <article class="account-card checking">
+
+                <p>Checking Account</p>
+
+                <h2 id="checkingBalance">
+
+                    $0.00
+
+                </h2>
+
+                <span>Available Balance</span>
+
+            </article>
+
+            <article class="account-card savings">
+
+                <p>Savings Account</p>
+
+                <h2 id="savingsBalance">
+
+                    $0.00
+
+                </h2>
+
+                <span>Total Savings</span>
+
+            </article>
+
+            <article class="account-card credit">
+
+                <p>Credit Limit</p>
+
+                <h2>
+
+                    $25,000.00
+
+                </h2>
+
+                <span>Available Credit</span>
+
+            </article>
+
+        </section>
+
+        <!-- Quick Actions -->
+
+        <section class="quick-actions">
+
+            <button>Transfer</button>
+
+            <button>Pay Bills</button>
+
+            <button>Deposit</button>
+
+            <button>Cards</button>
+
+        </section>
+
+        <!-- Content Grid -->
+
+        <section class="content-grid">
+
+            <!-- Transactions -->
+
+            <div class="transactions">
+
+                <div class="section-header">
+
+                    <h2>Recent Transactions</h2>
+
+                    <a href="#">View All</a>
+
+                </div>
+
+                <div id="transactionList">
+
+                </div>
+
+            </div>
+
+            <!-- Right Column -->
+
+            <div class="right-column">
+
+                <div class="summary-card">
+
+                    <h3>Monthly Spending</h3>
+
+                    <h2>$2,438.22</h2>
+
+                    <p>Compared to last month</p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h3>Upcoming Bills</h3>
+
+                    <ul>
+
+                        <li>Internet - Aug 10</li>
+
+                        <li>Mortgage - Aug 15</li>
+
+                        <li>Electricity - Aug 18</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Bank Cards -->
+
+        <section class="cards-section">
+
+            <h2>Your Cards</h2>
+
+            <div class="bank-cards">
+
+                <div class="bank-card">
+
+                    <h3>NorthBridge Platinum</h3>
+
+                    <p>**** **** **** 4837</p>
+
+                    <span>12/30</span>
+
+                </div>
+
+                <div class="bank-card">
+
+                    <h3>NorthBridge Rewards</h3>
+
+                    <p>**** **** **** 9261</p>
+
+                    <span>09/29</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="users.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>
