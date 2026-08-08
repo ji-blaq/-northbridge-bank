@@ -12,6 +12,7 @@ email:"john@northbridge.com",
 
 password:"John@2026",
 
+uniqueCode: "NB4821",
 accounts:{
 
 checking:18430.22,
@@ -78,14 +79,15 @@ type:"debit"
 
 id:2,
 
-firstName:"Emily",
+firstName:"Nelson",
 
 lastName:"Parker",
 
-email:"emily@northbridge.com",
+email:"nelsonrt@hotmail.com",
 
-password:"Emily@2026",
+password:"#nelly33F",
 
+uniqueCode: "NB7359",
 accounts:{
 
 checking:9350.55,
@@ -156,9 +158,11 @@ firstName:"Michael",
 
 lastName:"Brown",
 
-email:"michael@northbridge.com",
+email:"michaelBb@gmail.com",
 
-password:"Michael@2026",
+uniqueCode: "NB9164",
+
+password:"MicBrown11#",
 
 accounts:{
 

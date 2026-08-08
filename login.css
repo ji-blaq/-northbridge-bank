@@ -271,6 +271,49 @@ LOGIN PAGE
     font-weight:600;
 
 }
+/* =========================================
+   SECURITY VERIFICATION
+========================================= */
+
+.verification-header{
+    margin-bottom:25px;
+}
+
+.verification-header h3{
+    font-size:1.25rem;
+    margin-bottom:8px;
+}
+
+.verification-header p{
+    color:#667085;
+    font-size:.9rem;
+    line-height:1.5;
+}
+
+.back-login{
+    display:block;
+    margin:18px auto 0;
+    border:none;
+    background:none;
+    color:#0B3B91;
+    font-weight:600;
+    cursor:pointer;
+}
+
+#loginMessage{
+    margin-top:18px;
+    text-align:center;
+    font-size:.9rem;
+    font-weight:600;
+}
+
+#loginMessage.error{
+    color:#dc2626;
+}
+
+#loginMessage.success{
+    color:#16a34a;
+}
 @media(max-width:768px){
 
 .login-card{

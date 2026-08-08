@@ -1,75 +1,192 @@
-const form = document.getElementById("loginForm");
+// ======================================
+// LOGIN ELEMENTS
+// ======================================
+
+const loginForm = document.getElementById("loginForm");
 
 const emailInput = document.getElementById("email");
 
 const passwordInput = document.getElementById("password");
 
-const loginBtn = document.getElementById("loginBtn");
+const loginStep = document.getElementById("loginStep");
+
+const codeStep = document.getElementById("codeStep");
+
+const uniqueCodeInput = document.getElementById("uniqueCode");
+
+const verifyCodeBtn = document.getElementById("verifyCodeBtn");
+
+const backToLogin = document.getElementById("backToLogin");
 
 const loginMessage = document.getElementById("loginMessage");
 
-form.addEventListener("submit", function (e) {
 
-    e.preventDefault();
+// ======================================
+// TEMPORARY USER
+// ======================================
 
-    loginMessage.textContent = "";
+let authenticatedUser = null;
+
+
+// ======================================
+// SHOW MESSAGE
+// ======================================
+
+function showMessage(message, type) {
+
+    loginMessage.textContent = message;
+
+    loginMessage.className = type;
+
+}
+
+
+// ======================================
+// STEP 1
+// EMAIL + PASSWORD
+// ======================================
+
+loginForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
 
     const email = emailInput.value.trim();
 
     const password = passwordInput.value;
 
-    loginBtn.textContent = "Signing In...";
 
-    loginBtn.disabled = true;
+    const user = users.find(function(user) {
 
-    setTimeout(() => {
+        return (
+            user.email === email &&
+            user.password === password
+        );
 
-        const user = users.find(currentUser => {
+    });
 
-            return (
 
-                currentUser.email.toLowerCase() === email.toLowerCase()
+    // Incorrect login
 
-                &&
+    if (!user) {
 
-                currentUser.password === password
+        showMessage(
+            "Incorrect email or password.",
+            "error"
+        );
 
-            );
+        return;
 
-        });
+    }
 
-        if (user) {
 
-            localStorage.setItem(
-    "loggedInUser",
-    user.id
-);
-            loginBtn.textContent = "Success ✓";
+    // Save user temporarily
 
-            setTimeout(() => {
+    authenticatedUser = user;
 
-                window.location.href = "dashboard.html";
 
-            }, 800);
+    // Hide first step
 
-        }
+    loginStep.style.display = "none";
 
-        else {
 
-            loginMessage.textContent =
+    // Show code step
 
-                "Incorrect email or password.";
+    codeStep.style.display = "block";
 
-            loginBtn.textContent = "Secure Sign In";
 
-            loginBtn.disabled = false;
+    // Clear old message
 
-            passwordInput.value = "";
+    showMessage("", "");
 
-            passwordInput.focus();
 
-        }
+    // Focus code field
 
-    }, 1200);
+    uniqueCodeInput.focus();
+
+});
+
+
+// ======================================
+// STEP 2
+// VERIFY UNIQUE CODE
+// ======================================
+
+verifyCodeBtn.addEventListener("click", function() {
+
+    const enteredCode =
+        uniqueCodeInput.value.trim();
+
+
+    if (!authenticatedUser) {
+
+        showMessage(
+            "Login session expired. Please sign in again.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    // Check unique code
+
+    if (
+        enteredCode !==
+        authenticatedUser.uniqueCode
+    ) {
+
+        showMessage(
+            "Incorrect security code.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    // ==================================
+    // SUCCESS
+    // ==================================
+
+    localStorage.setItem(
+        "loggedInUser",
+        authenticatedUser.id
+    );
+
+
+    showMessage(
+        "Verification successful. Redirecting...",
+        "success"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href = "dashboard.html";
+
+    }, 500);
+
+});
+
+
+// ======================================
+// BACK TO LOGIN
+// ======================================
+
+backToLogin.addEventListener("click", function() {
+
+    authenticatedUser = null;
+
+    codeStep.style.display = "none";
+
+    loginStep.style.display = "block";
+
+    uniqueCodeInput.value = "";
+
+    showMessage("", "");
+
+    emailInput.focus();
 
 });
