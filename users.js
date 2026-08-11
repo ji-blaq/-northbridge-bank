@@ -4,20 +4,20 @@ const users = [
 
 id:1,
 
-firstName:"John",
+firstName:"sara",
 
-lastName:"Anderson",
+lastName:"jay",
 
-email:"john@northbridge.com",
+email:"sarajay300@gmail.com",
 
-password:"John@2026",
+password:"saraJay$12",
 
 uniqueCode: "NB4821",
 accounts:{
 
 checking:18430.22,
 
-savings:82540.18
+savings:32540.18
 
 },
 
